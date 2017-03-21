@@ -1,3 +1,5 @@
 class Post < ApplicationRecord
-  translates :name
+  unless ENV['LETMECOMPILETHIS']
+    translates :name
+  end
 end
